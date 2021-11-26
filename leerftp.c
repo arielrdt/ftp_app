@@ -11,6 +11,7 @@ void changeToRoot(){
 int main(void)
 {
     changeToRoot();
+    
     system("mkdir test");
     printf ("Content-type:text/html\n\n");
     printf("<TITLE>Response</TITLE>\n");
