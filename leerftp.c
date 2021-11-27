@@ -8,21 +8,18 @@ void changeToRoot(){
 	if((setgid(0)) < 0) printf("\n<br>setgid: operacion no permitida\n");
 }
 
+void datosArchivoConfig(){
+    FILE* fichero;
+    fichero = fopen("/etc/vsftpd.conf", "rt");
+    printf(fichero);
+}
+
 int main(void)
 {
     changeToRoot();
-    
+
     system("mkdir test");
     printf ("Content-type:text/html\n\n");
-    printf("<TITLE>Response</TITLE>\n");
-
-    printf("<br>Datos Formulario: %s\n");
-    printf("<br>Tama&ntildeo: %d\n");
-
-    printf("<p> Mensaje: %s");
-    printf("<p> Usuario: %s");
-    printf("<p> Clave: %s");
-    printf("<p> Shell: %s");
-
+    printf("<TITLE>FTP CONFIG</TITLE>\n");
     return 0;
 } 
